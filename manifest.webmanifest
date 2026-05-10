@@ -1,0 +1,10 @@
+{
+  "name": "Radio Empire UK",
+  "short_name": "RadioEmpire",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#081124",
+  "theme_color": "#0b1220",
+  "description": "Mobile-first UK radio engineering business simulation.",
+  "icons": []
+}

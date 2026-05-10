@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0b1220" />
+    <title>Radio Empire UK</title>
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="topbar card">
+        <div>
+          <h1>Radio Empire UK</h1>
+          <p class="subtitle">Build the UK's leading two-way radio engineering company.</p>
+        </div>
+        <button id="saveBtn" class="btn secondary">Save</button>
+      </header>
+
+      <section id="onboarding" class="card">
+        <h2>Choose Your Engineer</h2>
+        <div class="row choices">
+          <button class="avatar-choice" data-avatar="male">🧑‍🔧 Male Engineer</button>
+          <button class="avatar-choice" data-avatar="female">👩‍🔧 Female Engineer</button>
+        </div>
+        <h3>Customise</h3>
+        <div class="grid form-grid">
+          <label>Hair<input id="hair" value="Short" /></label>
+          <label>Hair Colour<input id="hairColor" value="Brown" /></label>
+          <label>Skin Tone<input id="skinTone" value="Medium" /></label>
+          <label>Facial Hair<input id="facialHair" value="None" /></label>
+          <label>Uniform Colour<input id="uniformColor" value="Hi-vis Yellow" /></label>
+          <label>Safety Gear<input id="safety" value="Helmet" /></label>
+          <label>Brand Logo<input id="logo" value="RE UK" /></label>
+          <label>Glasses<input id="glasses" value="No" /></label>
+          <label>Hat<input id="hat" value="Hard Hat" /></label>
+          <label>Tool Bag<input id="toolBag" value="Starter Kit" /></label>
+        </div>
+        <button id="startBtn" class="btn">Start Company</button>
+      </section>
+
+      <main id="game" class="hidden">
+        <section class="kpis grid card">
+          <div><span>Cash</span><strong id="cash">£0</strong></div>
+          <div><span>Reputation</span><strong id="reputation">0</strong></div>
+          <div><span>Engineers</span><strong id="engineers">1</strong></div>
+          <div><span>Day</span><strong id="day">1</strong></div>
+        </section>
+
+        <section class="map card">
+          <div class="sky" id="sky"></div>
+          <div class="town">🏙️ London District</div>
+          <div class="town">🏭 Industrial Estate</div>
+          <div class="town">🌊 Coastal Marina</div>
+          <div class="town">🚜 Rural Farms</div>
+          <div id="weatherBadge" class="badge">☀️ Clear</div>
+        </section>
+
+        <section class="card">
+          <h2>Live Task Board</h2>
+          <div id="taskList" class="tasks"></div>
+          <div class="row">
+            <button id="nextTick" class="btn">Advance Time</button>
+            <button id="newLead" class="btn secondary">Find New Lead</button>
+          </div>
+        </section>
+
+        <section class="grid two-col">
+          <article class="card">
+            <h2>Company</h2>
+            <ul id="companyList" class="clean"></ul>
+            <button id="hireBtn" class="btn secondary">Hire Engineer (£2,500)</button>
+            <button id="vanBtn" class="btn secondary">Upgrade Van (£1,800)</button>
+          </article>
+          <article class="card">
+            <h2>Technology</h2>
+            <ul id="techTree" class="clean"></ul>
+            <button id="researchBtn" class="btn secondary">Research Next Tech (£2,000)</button>
+          </article>
+        </section>
+
+        <section class="card" id="feedWrap">
+          <h2>Operations Feed</h2>
+          <div id="feed" class="feed"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
